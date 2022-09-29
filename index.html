@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS</title>
+</head>
+
+<body oncontextmenu="return false">
+    <div class="crud">
+        <div class="head">
+            <h2>crud</h2>
+            <p>Product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="price">
+                <input type="number" onkeyup="getTotal()" id="price" placeholder="Price">
+                <input type="number" onkeyup="getTotal()" id="texes" placeholder="texes">
+                <input type="number" onkeyup="getTotal()" id="ads" placeholder="ads">
+                <input type="number" onkeyup="getTotal()" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="Category">
+            <button id="submit">Create</button>
+
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup=" searchData(this.value)" type="text" placeholder="Search here.." id="search">
+                <div class="btnSearch">
+                    <button onclick=" getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick=" getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+
+                </div>
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>texas</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>category</th>
+                    <th>Update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="CRUDS.JS"></script>
+
+
+    <script>
+        document.onkeydown = function(e) {
+            if (event.KeyCode == 123) {
+                window.alert("You Can't Access . .");
+    
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                window.alert("You Can't Access . .");
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                window.alert("You Can't Access . .");
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                window.alert("Can't Display Source Code . .");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
